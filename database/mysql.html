@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>MYSQL</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+					<img class="profile-image mb-3 rounded-circle mx-auto" src="assets/profile.jpg" alt="image" ></br>
+					<div class="bio mb-3"></br>Hai, nama saya REZA MIFTAHUL RIZKI<br>L200170108<br>Universitas Muhammadiyah Surakarta<a href="about.html"></a></div>
+				</div>
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item active">
+								<a class="nav-link" href="about.html"><i class="fas fa-home fa-fw mr-2"></i>MSQL</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="dml.html"><i class="fas fa-bookmark fa-fw mr-2"></i>DML<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="ddl.html"><i class="fas fa-bookmark fa-fw mr-2"></i>DDL</a>
+					</li>
+					
+				</ul>
+				
+				
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    	    
+	    <article class="about-section py-5">
+		    <div class="container">
+			    <h2 class="title mb-3">MYSQL</h2>
+			    
+			    
+			    <h5 class="mt-5">MYSQL??</h5>
+			    <p>SQL (Structured Query Language) adalah bahasa yang di gunakan dalam pemrograman 
+						dan di rancang untuk mengelola data yang tersimpan dalam Sistem Manajemen Database Relasional 
+						(<i>Relational Database Management System</i>, RDBMS), 
+						atau untuk stream processing dalam Relational Data Stream Management System (RDSMS).</br>
+						Salah satu dari fungsi database adalah menyimpan dan memelihara serta mengelola data, oleh karena itu penting 
+						bagi kita untuk mengetahui perintah dasar SQL yang dapat di gunakan untuk menyimpan dan memelihara serta 
+						mengelola data dalam database tersebut baik secara langsung maupun menggunakan macam-macam bahasa pemrograman.</p>
+			   
+				<h5 class="mt-5">1. SELECT</h5>
+			    <p>perintah dasar SQL yang di gunakan untuk memilih data dari database. 
+						Data yang di kembalikan di simpan dalam tabel yang di sebut result-set.
+						Contoh :</br>
+						SELECT nim, nama, alamat FROM siswa;</br>
+						atau</br>
+						SELECT* FROM mahasiswa;</br></p>
+
+			    <h5 class="mt-5">2. WHERE</h5>
+			    <p>perintah dasar SQL yang di gunakan untuk memfilter hasil SELECT dengan mengekstrak 
+						record yang memenuhi persyaratan tertentu.</br>
+						Contoh :</br>
+						SELECT kolom1, kolom2, ... FROM nama_tabel WHERE kondisi;</br>
+						SELECT nis, nama FROM siswa WHERE alamat='jakarta';</p>
+				
+				<h5 class="mt-5">3.  AND, OR dan NOT</h5>
+			   <p>merupakan perintah dasar SQL yang biasanya di kombinasikan dengan perintah WHERE. Ketiganya di gunakan untuk 
+				mem-filter record berdasarkan suatu kondisi, operator AND akan menampilkan record apabila semua kondisi bernilai TRUE, operator OR 
+				akan menampilkan record apabila salah satu kondisi bernilai TRUE, sedangkan operator NOT akan menampilkan record apabila semua kondisi 
+				bernilai FALSE.</br>
+				<b>a. Contoh AND</b></br>
+				SELECT nis, nama FROM siswa WHERE alamat='Jakarta' AND tahun_lahir='2000'</br>
+				Perintah di atas akan menampilkan record NIS dan NAMA dari tabel SISWA dengan ALAMAT di JAKARTA dan TAHUN_LAHIR “2000”, 
+				artinya record siswa yang lahir di tahun “2000” namun tidak beralamat di “Jakarta: atau siswa yang beralamat di “Jakarta” 
+				namaun lahir bukan pada tahun “2000” tidak akan di tampilkan.</br>
+				<b>b. Contoh OR</b></br>
+				SELECT nis, nama FROM siswa WHERE alamat='Jakarta' OR alamat='Bandung'/br>
+				Perintah di atas akan menampilkan record NIS dan NAMA dari tabel SISWA dengan ALAMAT di “JAKARTA” atau di “Bandung”,</br> 
+				artinya record siswa yang beralamat di “Jakarta” dan di “Bandung” saja yang akan di tampilkan.</br>
+				<b>c. Contoh NOT</b></br>
+				SELECT nis, nama FROM siswa WHERE NOT alamat='Jakarta'</br>
+				Perintah di atas akan menampilkan semua record NIS dan NAMA dari tabel SISWA kecuali record siswa yang beralamat di ‘Jakarta’.</p>
+
+				<h5 class="mt-5">4. SELECT DISTINCT</h5>
+				<p>perintah dasar SQL yang di gunakan untuk mengembalikan hanya nilai yang berbeda dari dalam 
+						sebuah tabel, dengan kata lain semua record duplikat (record dengan nilai yang sama) yang terdapat pada tabel akan di anggap sebagai 
+						satu record/nilai. Contoh :</br>
+					SELECT DISTINCT alamat FROM siswa;</p>
+				
+				<h5 class="mt-5">5. ORDER BY</h5>
+					<p>perintah dasar SQL yang di gunakan untuk mengurutkan result-set dalam pengurutan ‘ascending’ 
+							atau ‘descending’. Secara default perintah ORDER BY menampilkan record dalam pengurutan ‘ascending’ (‘ASC’). Untuk mengurutkan 
+							‘descending’, gunakan kata kunci ‘DESC’. Contoh :</br>
+					SELECT nis, nama FROM siswa ORDER BY tahun_lahir DESC;</br></p>
+				
+				<h5 class="mt-5">6. INSERT INTO</h5>
+					<p>perintah dasar SQL bagian dari perintah untuk DML (Data Manipulation Language) 
+					Saya asumsikan Anda telah faham perbedaan DDL, DCL, dan DML. Perintah INSERT INTO dapat di gunakan untuk menambahkan record 
+					baru ke dalam tabel. Contoh :</br>
+					INSERT INTO siswa VALUES ('12345', 'Sasa', 'Jakarta');</br>
+					NSERT INTO siswa (nim, nama) VALUES ('12345', 'Abdul');</br></p>
+					
+				<h5 class="mt-5">7. UPDATE</h5>
+					<p>perintah dasar SQL yang di gunakan untuk memperbarui atau mengubah nilai suatu record berdasarkan 
+					kriteria tertentu.Contoh :</br>
+					UPDATE siswa SET nama = 'Ahmad', alamat = 'Bandung' WHERE nim = '12345';</br></p>
+					
+				<h5 class="mt-5">8. DELETE</br></h5>
+					<p>perintah dasar SQL yang di gunakan untuk menghapus nilai 
+						suatu record berdasarkan kriteria tertentu. Contoh : 
+						DELETE FROM siswa WHERE nim = '12345';</br></p>
+				
+				<h5 class="mt-5">9. MIN</br></h5>
+					<p>perintah dasar SQL yang di gunakan untuk mendapatkan nilai terkecil dari suatu kolom, Anda dapat 
+						menerapkannya pada kolom ‘harga’, ‘nilai’, ‘qty’ atau kolom yang semisal dengan itu, berbeda dengan perintah ORDEY BY, fungsi MIN() 
+						hanya menampilkan satu record saja yang memenuhi kriteria yang Anda tentukan. Contoh :</br>
+						SELECT MIN(harga) FROM barang WHERE kategori='atk';</br></p>
+		
+				<h5 class="mt-5">10. MAX</br></h5>
+				<p>perintah dasar SQL yang di gunakan untuk mendapatkan nilai terbesar dari suatu kolom, 
+					seperti halnya fungsi MIN() Anda dapat menerapkannya pada kolom ‘harga’, ‘nilai’, ‘qty’ atau kolom yang semisal dengan itu. Contoh :</br>
+					SELECT MAX(nama_kolom) FROM nama_tabel WHERE kondisi; </p>
+					
+				<h5 class="mt-5">11. COUNT</br></h5>
+					<p>merupakan perintah dasar SQL yang di gunakan untuk mendapatkan jumlah hitungan record yang memenuhi suatu kriteria. Contoh :</p>
+					SELECT COUNT(id) FROM barang WHERE kategori='atk';</br></p>
+					
+				<h5 class="mt-5">12. AVG</br></h5>
+					<p>perintah dasar SQL yang di gunakan untuk mendapatkan rata-rata record yang memenuhi suatu kriteria, 
+						tentunya nilai pada kolom harus numerik. Contoh :</br>
+						SELECT AVG(harga) FROM barang WHERE kategori='atk';</p>
+					
+				<h5 class="mt-5">13. SUM</br></h5>
+					<p>perintah dasar SQL yang di gunakan untuk mendapatkan jumlah record yang memenuhi suatu kriteria, 
+						tentunya nilai pada kolom harus numerik. Contoh :</br>
+						SELECT SUM(qty) FROM barang WHERE kategori='atk';</p>
+				
+				<h5 class="mt-5">14. INNER JOIN</br></h5>
+					<p>perintah dasar SQL yang di gunakan untuk menggabungkan beberapa tabel dan mengambil nilai yang cocok 
+						(identik) di antara kedua tabel tersebut. Contoh :</br>
+					SELECT pesanan.id_pesanan, pelanggan.nama FROM pesanan INNER JOIN pelanggan ON pesanan.id_pelanggan = 
+					pelanggan.id_pelanggan;</p>
+					
+				<h5 class="mt-5">15. LEFT JOIN</br></h5>
+					<p>perintah dasar SQL yang di gunakan untuk menggabungkan beberapa tabel dan mengambil nilai yang 
+						cocok (identik) di antara kedua tabel tersebut dan nilai lain dari tabel pada ruas kiri meskipun tak ada nilai yang cocok 
+						dengan tabel pada ruas kanan. Contoh :</br></p>
+					SELECT pelanggan.nama, pesanan.barang_pesanan FROM pelanggan LEFT JOIN pesanan ON pesanan.id_pelanggan = 
+					pelanggan.id_pelanggan;</p>
+		
+		    </div>
+	    
+	    <footer class="footer text-center py-2 theme-bg-dark">
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+    <!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
+    <div id="config-panel" class="config-panel d-none d-lg-block">
+        <div class="panel-inner">
+            <a id="config-trigger" class="config-trigger config-panel-hide text-center" href="#"><i class="fas fa-cog fa-spin mx-auto" data-fa-transform="down-6" ></i></a>
+            <h5 class="panel-title">Choose Colour</h5>
+            <ul id="color-options" class="list-inline mb-0">
+                <li class="theme-1 active list-inline-item"><a data-style="assets/css/theme-1.css" href="#"></a></li>
+                <li class="theme-2  list-inline-item"><a data-style="assets/css/theme-2.css" href="#"></a></li>
+                <li class="theme-3  list-inline-item"><a data-style="assets/css/theme-3.css" href="#"></a></li>
+                <li class="theme-4  list-inline-item"><a data-style="assets/css/theme-4.css" href="#"></a></li>
+                <li class="theme-5  list-inline-item"><a data-style="assets/css/theme-5.css" href="#"></a></li>
+                <li class="theme-6  list-inline-item"><a data-style="assets/css/theme-6.css" href="#"></a></li>
+                <li class="theme-7  list-inline-item"><a data-style="assets/css/theme-7.css" href="#"></a></li>
+                <li class="theme-8  list-inline-item"><a data-style="assets/css/theme-8.css" href="#"></a></li>
+            </ul>
+            <a id="config-close" class="close" href="#"><i class="fa fa-times-circle"></i></a>
+        </div><!--//panel-inner-->
+    </div><!--//configure-panel-->
+
+    
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="assets/js/demo/style-switcher.js"></script>     
+    
+
+</body>
+</html> 
+
